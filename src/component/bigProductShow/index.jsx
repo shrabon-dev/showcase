@@ -36,7 +36,7 @@ export default function BigProduct() {
             <div className="container">
               <div className="txt-box pt-14 pb-20">
               <h6 className='font-helvetica font-medium text-2xl md:text-[62px] leading-normal lg:text-[80px] py-2 text-white'>Partnering With Major <span className='font-artusi italic font-thin'>Brands</span></h6>
-              <p className='font-helvetica text-[#80808080] font-medium text-bse md:text-xl max-w-[900px]'>The world of spatial computing is here. ShowcaseX platform already hosts immersive product experiences for the likes of Curry and Paxton 1880, Charles Harbison Studio and Olubiyi Thomas, driving increased product session times, awareness, and engagement far beyond traditional digital 2D product browsing.</p>
+              <p className='font-helvetica text-[#ffffff] font-normal text-bse md:text-xl max-w-[900px]'>The world of spatial computing is here. ShowcaseX platform already hosts immersive product experiences for the likes of Curry and Paxton 1880, Charles Harbison Studio and Olubiyi Thomas, driving increased product session times, awareness, and engagement far beyond traditional digital 2D product browsing.</p>
               </div>
             </div>
         <Slider {...settings}>
@@ -158,8 +158,6 @@ export default function BigProduct() {
               </div>
              </div>
         </div>
-       
-    
         </Slider>
     </section>
     </>

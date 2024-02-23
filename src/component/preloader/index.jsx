@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 
 export default function Preloader() {
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     // Simulating async task completion

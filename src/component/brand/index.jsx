@@ -38,8 +38,7 @@ export default function Brand() {
   return (
     <>
         <section className='bg-black'>
-            <div className="bg-black  items-center rounded-t-[40%] relative top-[-220px] ">
-
+            <div className="bg-black  items-center rounded-t-[40%] relative md:top-[-120px] lg:top-[-200px] xl:top-[-260px] 2xl:top-[-120px] ">
                 <div className="brand border-t border-b border-[#303030] justify-around items-center rounded-t-[40%] rounded-b-[20%] overflow-hidden">
                     <div className="brand-slider">
                         <Slider  {...settings}>
@@ -73,8 +72,7 @@ export default function Brand() {
                     </div>
                 </div>
             </div>
-
-    </section>
+        </section>
     </>
   )
 }

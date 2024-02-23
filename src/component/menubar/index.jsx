@@ -40,14 +40,13 @@ export default function Menubar() {
                                 <ul className='space-y-6 md:space-y-0 md:flex justify-center'>
                                     <li><a className='menu_a md:menu_active' href="#">Home</a></li>
                                     <li><a className='menu_a' href="#">Solution</a></li>
-                                    <li><a className='menu_a' href="#">verticals</a></li>
                                     <li><a className='menu_a' href="#">About US</a></li>
                                 </ul>
                             </div>
                         </div>
                         <div className="md:w-1/6 text-right pt-10 md:pt-0">
                             <div className="book-btn md:text-right">
-                                <Button text="Book A Demo"/>
+                                <Button menu='true' text="Book A Demo"/>
                             </div>
                         </div>
                     </div>

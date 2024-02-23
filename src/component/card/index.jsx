@@ -84,8 +84,8 @@ export default function ProductCard() {
                     muted={true}
                     />
 
-                    <p className="badge font-helvetica absolute duration-700 group-hover:bg-highlight overflow-hidden top-1/2 left-1/2 -translate-x-1/2 font-medium text-4xl text-white backdrop-blur-sm rounded-full border border-[#F9F9F9] inline-block px-14 py-6 -translate-y-1/2">
-                         NFC  <a href="#"><FaArrowUpLong className='inline-block absolute group-hover:relative -right-full group-hover:right-1 text-5xl rotate-45 text-white'/></a>
+                    <p className="badge font-helvetica absolute duration-700  overflow-hidden top-1/2 left-1/2 -translate-x-1/2 font-medium text-4xl text-white backdrop-blur-sm rounded-full border border-[#F9F9F9] inline-block px-14 py-6 -translate-y-1/2">
+                         NFC 
                     </p> 
                     <div className="btm absolute -bottom-4 bg-black/5 backdrop-blur-md px-6 py-8 flex justify-between">
                         <p className='font-helvetica font-medium text-2xl text-white leading-[32px]'>showcaseX is an on garment NFC code, attached to an activation.  </p>
@@ -99,8 +99,8 @@ export default function ProductCard() {
                     autoPlay={true}
                     muted={true}
                     />
-                    <p className="badge font-helvetica absolute duration-700 group-hover:bg-highlight overflow-hidden top-1/2 left-1/2 -translate-x-1/2 font-medium text-4xl text-white backdrop-blur-sm rounded-full border border-[#F9F9F9] inline-block px-14 py-6 -translate-y-1/2">
-                    Website  <a href="#"><FaArrowUpLong className='inline-block text-5xl absolute group-hover:relative -right-full group-hover:right-1 rotate-45 text-white'/></a>
+                    <p className="badge font-helvetica absolute duration-700  overflow-hidden top-1/2 left-1/2 -translate-x-1/2 font-medium text-4xl text-white backdrop-blur-sm rounded-full border border-[#F9F9F9] inline-block px-14 py-6 -translate-y-1/2">
+                    Website  
                     </p>
                     <div className="btm absolute -bottom-4 bg-black/5 backdrop-blur-md px-6 py-8 flex justify-between">
                         <p className='font-helvetica font-medium text-2xl text-white leading-[32px]'>showcaseX is an on garment NFC code, attached to an activation.  </p>

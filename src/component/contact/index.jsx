@@ -31,7 +31,7 @@ export default function Contact(props) {
                                     <input className='bg-transparent w-full font-helvetica py-2 font-medium text-2xl focus:outline-none placeholder:font-helvetica placeholder:font-medium placeholder:text-2xl placeholder:text-black border-b border-black' type="text" name="" id="" placeholder='Message'/>
                                 </div>
                                 <div className="btn text-center">
-                                    <button className='font-helvetica bg-highlight w-full duration-300 ease-linear font-medium text-lg    text-white relative py-3 after:absolute after:bg-black after:w-0 hover:after:h-6 hover:before:h-6 hover:after:w-6 after:h-0 after:duration-100 after:ease-linear after:rounded-bl-[100%] after:right-0 after:top-0 before:top-0 before:absolute before:bg-black before:w-0 hover:before:w-6 before:duration-100 before:ease-linear before:h-0 before:rounded-br-[100%] before:left-0 '>Book A Demo</button>
+                                    <button className='font-helvetica bg-highlight w-full duration-300 ease-linear font-medium text-lg    text-white relative py-3 after:absolute after:bg-black after:w-0 hover:after:h-2/3 hover:before:h-2/3 hover:after:w-[14px] after:h-0 after:duration-100 after:ease-linear after:rounded-bl-[200%] after:right-0 after:top-0 before:top-0 before:absolute before:bg-black before:w-0 hover:before:w-[14px] before:duration-100 before:ease-linear before:h-0 before:rounded-br-[100%] before:left-0 '>Book A Demo</button>
                                 </div>
                             </form>
                         </div>

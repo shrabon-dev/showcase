@@ -16,7 +16,7 @@
     @apply !text-highlight relative after:absolute after:bg-highlight after:w-2 after:h-full after:rounded-bl-[100%] after:right-0 after:top-0 before:top-0 before:absolute before:bg-highlight before:w-2 before:h-full before:rounded-br-[100%] before:left-0
   }
   .f_menu{
-    @apply text-[#E0DBCE] font-helvetica font-medium text-xs sm:text-base pb-1 md:mb-4 inline-block duration-300 ease-linear hover:text-highlight relative after:w-0 after:h-[1px] after:absolute after:bottom-0 after:left-0 after:bg-highlight hover:after:w-full after:duration-300 after:ease-linear
+    @apply text-[#E0DBCE] font-helvetica font-normal text-xs sm:text-base pb-1 md:mb-4 inline-block duration-300 ease-linear hover:text-highlight relative after:w-0 after:h-[1px] after:absolute after:bottom-0 after:left-0 after:bg-highlight hover:after:w-full after:duration-300 after:ease-linear
   }
 }
 .slick-slider .slick-track{
@@ -126,4 +126,36 @@
   to {
     /* fill: red; */
   }
+}
+.marquee-container {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: auto; /* Adjust height as needed */
+}
+
+.marquee-content {
+  display: flex;
+  animation: marquee 40s linear infinite;
+  animation-delay: 1s;
+  word-wrap: break-word;
+  word-break: break-word;
+  -webkit-animation: marquee 40s linear infinite;
+}
+
+@keyframes marquee {
+  from {
+      transform: translateX(0%);
+      -webkit-transform: translateX(0%);
+      -moz-transform: translateX(0%);
+      -ms-transform: translateX(0%);
+      -o-transform: translateX(0%);
+}
+  to {
+      transform: translateX(-100%);
+      -webkit-transform: translateX(-100%);
+      -moz-transform: translateX(-100%);
+      -ms-transform: translateX(-100%);
+      -o-transform: translateX(-100%);
+}
 }
