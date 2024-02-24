@@ -104,29 +104,68 @@
   width: 200%;
   height: 200%;
 }
-.showcase-text {
-  animation: draw 10s infinite linear forwards, fill 10s infinite linear forwards;
-  -webkit-animation: draw 10s infinite linear forwards, fill 10s infinite linear forwards;
+
+.preloader-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;/* You can change the background color */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-@keyframes draw {
-  from {
-    stroke-dasharray: 1300;
-    stroke-dashoffset: 1300;
+.loading-text {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.progress-bar {
+  width: 559px; /* You can adjust the width of the progress bar */
+  height: 10px;
+  background-color: transparent; /* You can change the background color of the progress bar */
+  border-radius: 10px;
+  border: 2px solid #F7381E;
+}
+
+.progress {
+  height: 100%;
+  background-color: #F7381E; /* You can change the color of the progress indicator */
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff; /* You can change the color of the percentage text */
+}
+
+.loading-img{
+  position: relative;
+}
+.loading-img::after{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0%;
+  background: #000000;
+  height: 100%;
+  transform-origin: left;
+  content: '';
+  animation: imgFill 5s 1 linear 0s;
+  -webkit-animation: imgFill 5s 1 linear 0s;
+}
+
+@keyframes imgFill {
+  0%{
+    width: 100%;
   }
-  to {
-    stroke-dashoffset: 0;
+  100%{
+    width: 0%;
   }
 }
 
-@keyframes fill {
-  from {
-    fill: none;
-  }
-  to {
-    /* fill: red; */
-  }
-}
+
 .marquee-container {
   overflow: hidden;
   position: relative;

@@ -2,7 +2,7 @@ import React from 'react'
 import circle from '../../assets/images/mobile/circle.png'
 import small_logo from '../../assets/images/mobile/c_icon.png'
 import leftMble from '../../assets/images/mobile/lmobile.webp'
-import rightMble from '../../assets/images/mobile/rmobile.webp'
+import rightMble from '../../assets/images/mobile/mock.png'
 import left from '../../assets/images/mobile/left.png'
 import right from '../../assets/images/mobile/right.png'
 import VideoPlayer from "react-background-video-player";
@@ -42,17 +42,20 @@ export default function Mobile() {
           
             <div className="lg:w-3/6">
                 <div className="md:flex">
-                <div className={`img w-4/6 pl-10 -left-48 md:left-0 relative`}>
+                <div className={`img w-4/6 pl-10 -left-48 md:left-0 relative`} >
                     <span className='absolute -right-[110%] md:-right-2/3 top-2/3 md:top-32' ><img src={right} alt={right} /></span>
                     <picture>
-                        {/* <img className='w-auto max-w-xs lg:max-w-[222px] xl:max-w-[222px] 2xl:max-w-xs  block m-auto' src={rightMble} alt={rightMble} /> */}
+                        <img className='w-auto max-w-xs lg:max-w-[222px] xl:max-w-[222px] 2xl:max-w-xs  block m-auto' src={rightMble} alt={rightMble} />
                     </picture>
+                    <div className="bg w-[74%] max-w-xs lg:max-w-[222px] xl:max-w-[222px] 2xl:max-w-xs h-[620px] absolute top-4 right-8 rounded-[42px] block m-auto z-10 bg-red-200">
+
                     <VideoPlayer
                     className="video !left-0 h-40 rounded-[50px]"
                     src={v1}
                     autoPlay={true}
                     muted={true}
                     />
+                    </div>
                 </div>
                 <div className="right">
                   <div className="text w-max h-max bg-[#FFFFFF20] p-5 ml-auto md:m-auto md:mt-96 rounded-2xl">

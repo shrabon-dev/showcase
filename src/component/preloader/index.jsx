@@ -1,37 +1,72 @@
 import React, { useEffect, useState } from 'react'
+import logo from "../../assets/images/logo.png"
+import VideoPlayer from "react-background-video-player";
+import intro from '../../assets/video/intro.mp4'
 
 export default function Preloader() {
-  const [loading, setLoading] = useState(false);
+  const [progress, setProgress] = useState(0);
+  let [videoPlay,setVideoPlay] = useState(false)
+  let [preloader,setPrelaoder] = useState(true)
 
-  useEffect(() => {
-    // Simulating async task completion
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 10000); // Change the duration as needed
+ useEffect(() => {
+  let interval;
+  setTimeout(() => {
+    setVideoPlay(false)
+    interval = setInterval(() => {
+      // Simulating progress increment
+      setProgress(prevProgress => {
+        if (prevProgress === 100) {
+          clearInterval(interval);
+          return 100;
+        } else {
+          return prevProgress + 1;
+        }
+      });
+    }, 100);
+    
+  },);
+  setTimeout(()=>{
+    setPrelaoder(false)
+  },10000)
 
-    return () => clearTimeout(timer);
-  }, []);
+
+  return () => clearInterval(interval);
+}, []);
   return (
     <>
-     {loading && 
-    <section className='preloader fixed z-[9999999999] top-0 left-0 w-screen h-screen bg-black'>
-      <div className="flex justify-center items-center h-screen">
-      <svg className="w-[900px] h-64" viewBox="0 0 100 220">
-        <text
-          x="-340"
-          y="150"
-          fontFamily="Arial"
-          fontSize="142"
-          strokeWidth="2"
-          stroke="red" // Set the stroke color to red
-          className={loading ? 'showcase-text' : 'showcase-text filled'}
-        >
-          ShowcaseX
-        </text>
-      </svg>
+    {preloader &&
+    <section className='preloader fixed z-[9999998] top-0 left-0 w-screen h-screen bg-black '>
+    {!videoPlay ?
+    (
+      <div className='preloader fixed z-[9999998] top-0 left-0 w-screen h-screen bg-black '>
+    <div className="preloader-container">
+      <div className="loading-img pb-10">
+        <picture>
+          <img className='block w-full' src={logo} alt={logo} />
+        </picture>
+      </div>
+      <div className="progress-bar">
+        <div className="progress" style={{ width: `${progress}%` }}></div>
+        <div className="percent font-helvetica text-3xl font-light text-[#64615D] text-center pt-2" >{progress}%</div>
+      </div>
     </div>
-    </section>
-    }
+    </div>
+   
+    )
+    :
+    (
+      <div className="video absolute top-0 left-0 w-screen h-screen z-[9999999]">
+        <VideoPlayer
+            className="video"
+            src={intro}
+            autoPlay={true}
+            muted={true}
+        />
+    </div>
+    )
+     }
+     </section>
+     }
     </>
   )
 }
